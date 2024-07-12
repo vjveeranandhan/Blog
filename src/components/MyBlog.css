@@ -1,0 +1,33 @@
+.blog-header{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: -17px;
+}
+
+.blog-details{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.blog-content{
+    margin-top: -10px;
+}
+
+.main-blog{
+    padding: 60px;
+    /* background-color: #737373; */
+}
+
+.blog-container{
+    border: 1px solid rgb(88, 87, 87);
+    margin: 2px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 7px;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #919191; */
+    color: white;
+}

@@ -1,0 +1,16 @@
+.home-div{
+    display: flex;
+    flex-direction: column; /* or row, depending on your layout */
+    justify-content: center; /* Align items vertically */
+    align-items: center; /* Align items horizontally */
+    height: 900px; /* Take up 100% of viewport height */
+}
+
+.home-div {
+    /* background-image: url('../images/background.jpg'); */
+    /* background-color: #737373; */
+    height: 93.2vh; /* Adjusted to fill the entire viewport height */
+    background-size: cover; /* Ensures the background image covers the entire div */
+    background-position: center; /* Centers the background image */
+    /* Other styles */
+}

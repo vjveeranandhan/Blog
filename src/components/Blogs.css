@@ -1,0 +1,72 @@
+.blog-container{
+    border: 1px solid rgb(88, 87, 87);
+    margin: 2px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 7px;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #919191; */
+    color: white;
+}
+
+.blog-header{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: -17px;
+}
+
+.blog-details{
+    color: rgb(255, 255, 255);
+}
+
+.blog-content{
+    margin-top: -21px;
+}
+
+.like-comment-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Example gap between icons */
+}
+
+.like-comment-icons svg {
+    margin-left: 2px;
+    width: 24px; /* Example width */
+    height: 24px; /* Example height */
+    /* color: rgb(148, 146, 146); */
+}
+
+.main-blog{
+    padding: 60px;
+    /* background-color: #737373; */
+}
+
+.delete-button{
+    color: white;
+    width: 100px;
+    text-align: center;
+    margin-right: 4px;
+    height: 26px;
+    background-color: #e64769;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.edit-button{
+    width: 100px;
+    text-align: center;
+    margin-right: 4px;
+    height: 26px;
+    background-color: #edcc72;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+} 
+
+.button-container{
+    margin-left: auto;
+}
