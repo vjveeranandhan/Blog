@@ -34,7 +34,6 @@ const Login = () => {
 
     } catch (error) {
       console.error('Error fetching data:', error);
-      window.location.reload();
     }
 
   };
@@ -47,7 +46,7 @@ const Login = () => {
           <label>
             <input
               type="text"
-              name="username"
+              name="username"             
               value={formData.username}
               onChange={handleChange}
               required
