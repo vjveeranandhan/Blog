@@ -20,6 +20,7 @@ const Logout = async () => {
     console.log("localStorage.getItem('token')", localStorage.getItem('token'));
   } catch (error) {
     console.error('Error fetching data:', error);
+    localStorage['token']=''
     window.location.reload();
   }
 };
