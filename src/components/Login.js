@@ -25,7 +25,7 @@ const Login = () => {
         username: '',
         password: '',
       });
-      window.location.reload();
+      // window.location.reload();
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', response.data.user_id);
       console.log('Successful API response:', response.data);
