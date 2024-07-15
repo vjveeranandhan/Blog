@@ -7,13 +7,23 @@ const apiClient = axios.create({
   },
 });
 
-builder.Services
-    .AddAuth0WebAppAuthentication(options =>
-    {
-        options.Domain = builder.Configuration["Auth0:Domain"];
-        options.ClientId = builder.Configuration["Auth0:ClientId"];
-    });
+const builder = {
+  Configuration: {
+    "Auth0:Domain": "your-auth0-domain",
+    "Auth0:ClientId": "your-auth0-client-id"
+  },
+  Services: {
+    AddAuth0WebAppAuthentication: (options) => {
+      options.Domain = builder.Configuration["Auth0:Domain"];
+      options.ClientId = builder.Configuration["Auth0:ClientId"];
+    }
+  }
+};
 
+// Your code using 'builder'
+builder.Services.AddAuth0WebAppAuthentication(options => {
+  // Use 'builder' as needed
+});
 const ApiService = {
 
     register(endpoint, data) {
