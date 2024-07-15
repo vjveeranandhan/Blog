@@ -2,28 +2,12 @@ import axios from 'axios';
 
 const apiClient = axios.create({
   baseURL: 'http://34.228.57.209:8000',
+  withCredentials: false,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-const builder = {
-  Configuration: {
-    "Auth0:Domain": "your-auth0-domain",
-    "Auth0:ClientId": "your-auth0-client-id"
-  },
-  Services: {
-    AddAuth0WebAppAuthentication: (options) => {
-      options.Domain = builder.Configuration["Auth0:Domain"];
-      options.ClientId = builder.Configuration["Auth0:ClientId"];
-    }
-  }
-};
-
-// Your code using 'builder'
-builder.Services.AddAuth0WebAppAuthentication(options => {
-  // Use 'builder' as needed
-});
 const ApiService = {
 
     register(endpoint, data) {
@@ -100,6 +84,7 @@ const ApiService = {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
           },
+          withCredentials: false,
         });
         return response.data;
       } catch (error) {
@@ -117,6 +102,7 @@ const ApiService = {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
           },
+          withCredentials: false,
         });
         return response.data;
       } catch (error) {
