@@ -1,8 +1,8 @@
 import axios from 'axios';  
+axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
 
 const apiClient = axios.create({
   baseURL: 'http://34.228.57.209:8000',
-  withCredentials: false,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -84,7 +84,6 @@ const ApiService = {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
           },
-          withCredentials: false,
         });
         return response.data;
       } catch (error) {
@@ -102,7 +101,6 @@ const ApiService = {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
           },
-          withCredentials: false,
         });
         return response.data;
       } catch (error) {
