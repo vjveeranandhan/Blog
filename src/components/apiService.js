@@ -1,24 +1,24 @@
-import axios from 'axios';
+import axios from 'axios';  
 
 const apiClient = axios.create({
-  baseURL: 'http://3.91.56.27:8000',
+  baseURL: 'http://34.228.57.209:8000',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-apiClient.interceptors.request.use(
-  (config) => {
-    // Modify headers to include CORS
-    config.headers['Access-Control-Allow-Origin'] = 'http://3.91.56.27:3000';
-    config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
-    config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
+// apiClient.interceptors.request.use(
+//   (config) => {
+//     // Modify headers to include CORS
+//     config.headers['Access-Control-Allow-Origin'] = 'http://3.91.56.27:3000';
+//     config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
+//     config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
+//     return config;
+//   },
+//   (error) => {
+//     return Promise.reject(error);
+//   }
+// );
 
 const ApiService = {
 
@@ -91,7 +91,7 @@ const ApiService = {
       // console.log("Inside formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://3.91.56.27:8000',
+          baseURL: 'http://34.228.57.209:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
@@ -108,7 +108,7 @@ const ApiService = {
       console.log("Inside create_comment formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://3.91.56.27:8000',
+          baseURL: 'http://34.228.57.209:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
