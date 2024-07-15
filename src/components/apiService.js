@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://18.209.57.243:8000',
+  baseURL: 'http://3.91.56.27:8000',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -10,6 +10,7 @@ const apiClient = axios.create({
 const ApiService = {
 
     register(endpoint, data) {
+        console.log("Inside login ", endpoint)
         return apiClient.post(endpoint, data);
         },
 
@@ -77,7 +78,7 @@ const ApiService = {
       // console.log("Inside formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://18.209.57.243:8000',
+          baseURL: 'http://3.91.56.27:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
@@ -94,7 +95,7 @@ const ApiService = {
       console.log("Inside create_comment formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://18.209.57.243:8000',
+          baseURL: 'http://3.91.56.27:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
