@@ -7,6 +7,19 @@ const apiClient = axios.create({
   },
 });
 
+apiClient.interceptors.request.use(
+  (config) => {
+    // Modify headers to include CORS
+    config.headers['Access-Control-Allow-Origin'] = 'http://3.91.56.27:3000';
+    config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
+    config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 const ApiService = {
 
     register(endpoint, data) {
