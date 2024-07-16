@@ -2,7 +2,7 @@ import axios from 'axios';
 axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
 
 const apiClient = axios.create({
-  baseURL: 'http://34.228.57.209:8000',
+  baseURL: 'http://54.88.136.254:8000',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -79,7 +79,7 @@ const ApiService = {
       // console.log("Inside formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://34.228.57.209:8000',
+          baseURL: 'http://54.88.136.254:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
@@ -96,7 +96,7 @@ const ApiService = {
       console.log("Inside create_comment formData : ", formData);  
       try {
         const response = await axios.post(endpoint, formData, {
-          baseURL: 'http://34.228.57.209:8000',
+          baseURL: 'http://54.88.136.254:8000',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Token ${token}`,
